@@ -23,6 +23,7 @@
 }
 .button:focus-visible {
 	border: 2px solid var(--color-darker);
+	outline: none;
 }
 
 .button:disabled {

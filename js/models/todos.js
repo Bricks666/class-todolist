@@ -26,7 +26,7 @@ class Todo {
 }
 const savedTodos = getLocalStorage("todos", []);
 export const todos = new Observable(savedTodos);
-Todo.count = savedTodos.length;
+Todo.count = savedTodos.at(-1)?.id + 1 || 0;
 
 export const deleteTodo = (todoId) => {
 	todos.value = todos.value.filter((todo) => todo.id !== todoId);
