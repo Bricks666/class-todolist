@@ -1,0 +1,41 @@
+.form {
+	display: grid;
+	grid-template-columns: 1fr max-content;
+	gap: 10px;
+}
+
+.form__field {
+	display: grid;
+	gap: 5px;
+}
+
+.form__label {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.form__input {
+	padding: 8px 16px;
+
+	border: 2px solid var(--grey-lighter);
+	border-radius: 8px;
+
+	font-size: inherit;
+	font-family: inherit;
+
+	transition: border ease-in-out 195ms;
+}
+
+.form__input::placeholder {
+	color: var(--grey);
+}
+
+.form__input:focus {
+	border-color: var(--grey-darker);
+
+	outline: none;
+}
+
+.form__button {
+	align-self: end;
+}

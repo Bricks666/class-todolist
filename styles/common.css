@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	color: var(--grey);
+	font-size: 14px;
+	font-family: "Courier New", Courier, monospace;
+	line-height: 1.5em;
+
+	background-color: var(--bg);
+}
+
+:root {
+	--bg: #ebf0f7;
+
+	--grey-lighter: rgb(206, 204, 204);
+	--grey: rgb(75, 72, 72);
+	--grey-darker: rgb(48, 47, 47);
+
+	--error-lighter: rgb(252, 141, 141);
+	--error: rgb(248, 81, 81);
+	--error-darker: rgb(182, 31, 31);
+
+	--success-lighter: rgb(131, 204, 131);
+	--success: rgb(79, 189, 79);
+	--success-darker: rgb(7, 148, 7);
+
+	--primary-lighter: rgb(136, 173, 252);
+	--primary: rgb(71, 127, 248);
+	--primary-darker: rgb(3, 82, 250);
+}
+
+.root {
+	display: grid;
+
+	gap: 20px;
+
+	max-width: 800px;
+
+	padding: 5px;
+	margin: 0 auto;
+}

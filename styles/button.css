@@ -1,0 +1,52 @@
+.button {
+	display: inline-block;
+
+	padding: 8px 16px;
+	margin: 0;
+
+	min-width: 68px;
+
+	border: none;
+	border-radius: 8px;
+
+	background-color: var(--color);
+
+	font-size: inherit;
+	font-family: inherit;
+	color: var(--text);
+
+	transition: all ease-in-out 195ms;
+}
+
+.button:hover {
+	background-color: var(--color-darker);
+}
+.button:focus-visible {
+	border: 2px solid var(--color-darker);
+}
+
+.button:disabled {
+	background-color: var(--grey-lighter);
+	--text: var(--grey-darker);
+}
+
+.button--primary {
+	--color-lighter: var(--primary-lighter);
+	--color: var(--primary);
+	--color-darker: var(--primary-darker);
+	--text: white;
+}
+
+.button--success {
+	--color-lighter: var(--success-lighter);
+	--color: var(--success);
+	--color-darker: var(--success-darker);
+	--text: white;
+}
+
+.button--error {
+	--color-lighter: var(--error-lighter);
+	--color: var(--error);
+	--color-darker: var(--error-darker);
+	--text: white;
+}
