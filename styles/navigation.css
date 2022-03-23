@@ -1,0 +1,54 @@
+.navigation {
+	display: contents;
+}
+
+.navigation__list {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+
+	padding: 0;
+	margin: 0;
+}
+
+.navigation__item {
+	list-style: none;
+}
+
+.navigation__button {
+	padding: 5px 10px;
+
+	color: inherit;
+	font: inherit;
+	font-size: 16px;
+	text-transform: uppercase;
+
+	border-radius: 8px;
+	border: 0;
+
+	background-color: var(--background);
+
+	transition: all 195ms ease-in-out;
+
+	--background: var(--grey-lighter);
+	--invert-background: var(--grey);
+}
+
+.navigation__button:hover {
+	text-decoration: underline;
+
+	color: white;
+
+	background-color: var(--invert-background);
+}
+
+.navigation__button--active {
+	font-weight: 700;
+	color: white;
+
+	background-color: var(--invert-background);
+}
+
+.navigation__button--active:hover {
+	background-color: var(--background);
+}

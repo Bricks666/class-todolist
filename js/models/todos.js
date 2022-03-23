@@ -1,5 +1,6 @@
 import { Observable } from "../packages/index.js";
 import { getLocalStorage, setLocalStorage } from "../utils/index.js";
+import { user } from "./index.js";
 
 class Todo {
 	static #count = 0;
@@ -24,22 +25,26 @@ class Todo {
 		Todo.#count++;
 	}
 }
-const savedTodos = getLocalStorage("todos", []);
+const savedTodos = getLocalStorage(`todos.${user.value}`, []);
 export const todos = new Observable(savedTodos);
 Todo.count = savedTodos.at(-1)?.id + 1 || 0;
 
 export const deleteTodo = (todoId) => {
 	todos.value = todos.value.filter((todo) => todo.id !== todoId);
-	setLocalStorage("todos", todos.value);
+	setLocalStorage(`todos.${user.value}`, todos.value);
 };
 
 export const addTodo = (content) => {
 	todos.value = [...todos.value, new Todo(content)];
-	setLocalStorage("todos", todos.value);
+	setLocalStorage(`todos.${user.value}`, todos.value);
 };
 export const toggleDone = (todoId) => {
 	todos.value = todos.value.map((todo) =>
 		todo.id === todoId ? { ...todo, isDone: !todo.isDone } : todo
 	);
-	setLocalStorage("todos", todos.value);
+	setLocalStorage(`todos.${user.value}`, todos.value);
 };
+
+user.subscribe(() => {
+	todos.value = getLocalStorage(`todos.${user.value}`, []);
+});

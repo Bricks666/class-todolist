@@ -1,6 +1,5 @@
 export const classNames = (...classes) => {
 	const totalClasses = [];
-	console.log(classes);
 	for (const className of classes) {
 		switch (typeof className) {
 			case "string": {
@@ -26,7 +25,6 @@ export const classNames = (...classes) => {
 			}
 		}
 	}
-	console.log(classes);
 
 	return totalClasses.join(" ");
 };

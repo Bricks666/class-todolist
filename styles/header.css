@@ -4,9 +4,18 @@
 }
 
 .header__head {
-	padding: 0;
+	padding: 10px 0;
 	margin: 0;
 
 	text-transform: uppercase;
 	text-align: center;
+}
+
+.header__page {
+	text-align: center;
+}
+
+.header__navigation {
+	margin: 0 auto;
+	padding: 10px 0;
 }
