@@ -37,18 +37,19 @@
 .navigation__button:hover {
 	text-decoration: underline;
 
-	color: white;
+	color: var(--background);
 
 	background-color: var(--invert-background);
 }
 
 .navigation__button--active {
 	font-weight: 700;
-	color: white;
+	color: var(--background);
 
 	background-color: var(--invert-background);
 }
 
 .navigation__button--active:hover {
+	color: var(--invert-background);
 	background-color: var(--background);
 }

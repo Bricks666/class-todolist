@@ -21,8 +21,8 @@ export const createElement = (
 		element[key] = props[key];
 	}
 	if (typeof children === "object" && "length" in children) {
-		element.append(...children);
-	} else {
+		element.append(...children.filter(Boolean));
+	} else if (children) {
 		element.append(children);
 	}
 	return element;
